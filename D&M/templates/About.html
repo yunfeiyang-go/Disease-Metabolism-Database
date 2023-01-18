@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/static/css/style.css"><!--可能要用绝对路径显示-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(247, 245, 246);">
+    <div class="container">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">D&M</a>
+					<ul class="navbar-nav nav">
+						<li><a href="Home">Home</a></li>
+            <li><a href="Disease">Disease</a></li>  <!--这里是相对 URL - 指向站点内的某个文件（href="index.html"）-->
+						<li><a href="Metabolism">Metabolism</a></li>
+						<li><a href="Tutorial">Tutorial</a></li>
+						<li class="active"><a href="About">About</a></li>
+					</ul>
+				</div>
+			</div>
+    </div>
+
+    <br><br><br>
+    <div style="padding-left:80px 30px">
+        <h1><strong>Contact us</strong></h1>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <!--border表示表格的线宽为0即不显示表格线，cellspacing表示表格内数据与表格间隔为0，cellpadding表示单元格与单元格间隔为0，一般这个代码用于做网页的布局的。-->
+          <tr>
+            <td width="40%"><br>
+              <!--<strong>What we are doing?</strong><br>-->
+              <!--{% load static %}这个是用django编译才有效的-->
+              <img src="https://hdeit.com/Design/img/Who%20We%20Are.png" height=300px>  <!--可能要用绝对路径显示-->
+            </td>
+            <td width="60%"><br>
+              <h3><strong>Department</strong><br></h3>
+              <h4><a href="https://life.sjtu.edu.cn/">School of Life Sciences & Biotechnology of SJTU</a></h4>
+              <h3><strong>Group Member</strong><br></h3>
+              <h4>Ying Liang: Frontend & Interation<br>
+              Xinyi Dai: Interaction & Interation<br>
+              Xinjie Wang: Backend & Database Design<br>
+              Yunfeiyang Liu: Backend & Database Design<br></h4>
+              <h3><strong>Instructor</strong><br></h3>
+              <h4><a href="https://cbb.sjtu.edu.cn/~mywu/">Maoying Wu</a></h4>
+              <br>
+              <h4>This is a Curriculum Project in Database System Concepts.</h4>
+              Based on The Human Metabolome Database (HMDB) and Online Mendelian Inheritance in Man (OMIM) databases, 
+              important disease-related metabolic markers, information on metabolomic assays and supporting literature are collected and linked to human metabolic pathway maps (KEGG or REACTOME maps) 
+              with different colors to indicate rising or falling metabolites.<br><br>
+              The source code of this project can be found on <a href="https://github.com/peipp410/MiniFIFA">Github</a>. <br>
+              If there is any problem with this website, please contact <a href="LiangYing@sjtu.edu.cn">us</a>.</td>
+          </tr>
+        </table>
+        </div>
+</body>
+</html>

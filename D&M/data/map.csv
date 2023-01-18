@@ -1,0 +1,11 @@
+ID,DiseaseName,MapLink,MapID,MapImg
+1,Type 1 Diabetes,https://www.genome.jp/pathway/map04940,map04940,https://i.hd-r.cn/1c2296bd0b332c875dc9a8643e78d54e.png
+2,Type 2 Diabetes,https://www.genome.jp/pathway/map04930,map04930,https://i.hd-r.cn/359a1358e9a5c6082e6be393bea3045a.png
+3,Obesity,NULL,NULL,NULL
+4,Phenylketonuria,NULL,NULL,NULL
+5,Prostate cancer,https://www.genome.jp/pathway/map05215,map05215,https://i.hd-r.cn/70f6521e3525995e437306763f571df3.png
+6,Small cell lung cancer,https://www.genome.jp/pathway/map05222,map05222,https://i.hd-r.cn/5941f308a0a7fe7283e8634bd6da0dd5.png
+7,Non-small cell lung cancer,https://www.genome.jp/pathway/map05223,map05223,https://i.hd-r.cn/b928bdae51925bc325fcb745bee30ea9.png
+8,Thyroid cancer,https://www.genome.jp/pathway/map05216,map05216,https://i.hd-r.cn/43c81a00936ce8660abec53a9d063a3d.png
+9,Colorectal cancer,https://www.genome.jp/pathway/map05210,map05210,https://i.hd-r.cn/c7e33ce8a915091c6ad6fa523a84f782.png
+10,Ovarian cancer,NULL,NULL,NULL

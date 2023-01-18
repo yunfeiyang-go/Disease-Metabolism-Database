@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>cytoscape demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- 导入cytoscape.js库-->
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+    <style>
+    body {
+      font-family: helvetica neue, helvetica, liberation sans, arial, sans-serif;
+    }
+    #cy {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0.7;
+    }
+    h1 {
+      color: #6699FF;
+      opacity: 0.5;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+    <script>
+	//增加监听事件，函数内初始化
+    document.addEventListener('DOMContentLoaded', function () {
+      var cy = window.cy = cytoscape({
+        container: document.getElementById('cy'),	//container的值为DOM容器，表示显示图表的位置
+        style: [	//设置样式的样式表
+          {
+            selector: 'node',	//设置节点样式
+            css: {
+              'content': 'data(name)',
+               'color':'white',
+               'text-valign': 'center',
+               'text-outline-color': '#6699FF',
+               'background-color': '#6699FF',
+               'height': 60,
+                'width': 60,
+                'font-size':'14px',
+                'font-weight': 'bold',
+            }
+          },
+          {
+            selector: 'edge',	//设置边的样式
+            css: {
+            'content':'data(relationship)',
+              'curve-style': 'bezier',	//曲线类型为贝塞尔曲线
+              'target-arrow-shape': 'triangle',
+             'line-color': '#CCCCCC',
+             'width': 1,
+             'font-size':'14px',
+            }
+          }
+        ],
+
+        elements: {		//初始化元素
+          nodes: [		//节点数据
+            { data: { id:'n1',name: 'INS' } },
+            { data: { id:'n3',name: 'GAD' } },
+            { data: { id:'n4',name: 'IA-2' } },
+            { data: { id:'n5',name: 'CPE' } },
+            { data: { id:'n6',name: 'HSP' } },
+            { data: { id:'n7',name: 'ICA' } },
+            { data: { id:'n8',name: 'MHC-II' } },
+            { data: { id:'n9',name: 'CD80/86' } },
+            { data: { id:'n10',name:'TCR' } },
+            { data: { id:'n11',name:'CD28' } },
+            { data: { id:'n12',name:'IL-12' } },
+            { data: { id:'n13',name:'IL-2' } },
+            { data: { id:'n14',name: 'IFNy' } },
+            { data: { id:'n15',name: 'FasL' } },
+            { data: { id:'n16',name:'MHC-I' } },
+            { data: { id:'n17',name:'Fas' } },
+            { data: { id:'n18',name:'PRF1' } },
+            { data: { id:'n19',name:'GZM' } },
+            { data: { id:'n20',name: 'TNFb' } },
+            { data: { id:'n21',name:'TNFa' } },
+            { data: { id:'n22',name: 'IL-1' } },
+          ],
+          edges: [		//边的数据
+          { data: { id:'e1',relationship: 'exposure ', source: 'n1', target: 'n8' } },
+          { data: { id:'e2',relationship: 'exposure ', source: 'n3', target: 'n8' } },
+          { data: { id:'e3',relationship: 'exposure ', source: 'n4', target: 'n8' } },
+          { data: { id:'e4',relationship: 'exposure ', source: 'n5', target: 'n8' } },
+          { data: { id:'e5',relationship: 'exposure ', source: 'n6', target: 'n8' } },
+          { data: { id:'e6',relationship: 'exposure ', source: 'n7', target: 'n8' } },
+          { data: { id:'e7',relationship: 'process ', source: 'n1', target: 'n9' } },
+          { data: { id:'e8',relationship: 'process ', source: 'n3', target: 'n9' } },
+          { data: { id:'e9',relationship: 'process ', source: 'n4', target: 'n9' } },
+          { data: { id:'e10',relationship: ' process ', source: 'n5', target: 'n9' } },
+          { data: { id:'e11',relationship: ' process ', source: 'n6', target: 'n9' } },
+          { data: { id:'e12',relationship: ' process ', source: 'n7', target: 'n9' } },
+          { data: { id:'e13',relationship: ' antigen ', source: 'n8', target: 'n10' } },
+          { data: { id:'e14',relationship: ' antigen ', source: 'n9', target: 'n11' } },
+          { data: { id:'e15',relationship: '  ', source: 'n10', target: 'n13' } },
+          { data: { id:'e16',relationship: ' ', source: 'n11', target: 'n13' } },
+          { data: { id:'e17',relationship: '  ', source: 'n10', target: 'n14' } },
+          { data: { id:'e18',relationship: ' ', source: 'n11', target: 'n14' } },
+          { data: { id:'e19',relationship: '  ', source: 'n13', target: 'n10' } },
+          { data: { id:'e20',relationship: ' ', source: 'n14', target: 'n10' } },
+          { data: { id:'e21',relationship: '  ', source: 'n13', target: 'n15' } },
+          { data: { id:'e22',relationship: ' ', source: 'n14', target: 'n15' } },
+          { data: { id:'e23',relationship: ' antigen ', source: 'n15', target: 'n17' } },
+          { data: { id:'e24',relationship: ' ', source: 'n16', target: 'n10' } },
+          { data: { id:'e25',relationship: '  ', source: 'n18', target: 'n19' } },
+          { data: { id:'e26',relationship: ' ', source: 'n19', target: 'n20' } },
+          { data: { id:'e27',relationship: ' ', source: 'n20', target: 'n14' } },
+          { data: { id:'e28',relationship: ' ', source: 'n14', target: 'n21' } },
+          { data: { id:'e29',relationship: ' ', source: 'n21', target: 'n22' } },
+          { data: { id:'e30',relationship: ' ', source: 'n14', target: 'n22' } },
+          ]
+        },
+	//设置布局
+        layout: {
+          name: 'cose',	//一种默认布局方式
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+    <h1>Type I Diabetes Metabolism Relationship</h1>
+    <div id="cy"></div>
+</body>
+  
+</html>
